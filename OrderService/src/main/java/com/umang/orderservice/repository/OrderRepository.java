@@ -1,4 +1,8 @@
 package com.umang.orderservice.repository;
 
-public class OrderRepository {
+import com.umang.orderservice.entity.Order;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderRepository extends JpaRepository<Order, Integer> {
+
 }

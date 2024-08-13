@@ -1,18 +1,29 @@
 package com.umang.orderservice.service;
 
-
+import com.umang.orderservice.client.ProductClient;
+import com.umang.orderservice.dto.ProductDto;
+import com.umang.orderservice.entity.Order;
+import com.umang.orderservice.entity.OrderProduct;
+import com.umang.orderservice.repository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OrderService {
 
     private final OrderRepository orderRepository;
-    private final ProductRepository productRepository;
+    private final ProductClient productClient;
 
     @Autowired
-    public OrderService(OrderRepository orderRepository, ProductRepository productRepository) {
+    public OrderService(OrderRepository orderRepository, ProductClient productClient) {
         this.orderRepository = orderRepository;
-        this.productRepository = productRepository;
+        this.productClient = productClient;
     }
 
     public ResponseEntity<List<Order>> getAllOrders() {
@@ -54,11 +65,9 @@ public class OrderService {
     private BigDecimal calculateTotalPrice(Order order) {
         BigDecimal totalPrice = BigDecimal.ZERO;
         for (OrderProduct orderProduct : order.getOrderProducts()) {
-            Optional<Product> product = productRepository.findById(orderProduct.getProduct().getId());
-            if (product.isPresent()) {
-                BigDecimal price = product.get().getPrice().multiply(BigDecimal.valueOf(orderProduct.getQuantity()));
-                totalPrice = totalPrice.add(price);
-            }
+            ProductDto product = productClient.getProductById(orderProduct.getProduct());
+            BigDecimal price = product.getPrice().multiply(BigDecimal.valueOf(orderProduct.getQuantity()));
+            totalPrice = totalPrice.add(price);
         }
         return totalPrice;
     }

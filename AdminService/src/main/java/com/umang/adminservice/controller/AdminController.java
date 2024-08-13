@@ -1,6 +1,7 @@
 package com.umang.adminservice.controller;
 
 
+import com.umang.adminservice.client.ProductServiceClient;
 import com.umang.adminservice.dto.ProductDto;
 import com.umang.adminservice.service.AdminService;
 
@@ -17,6 +18,9 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    @Autowired
+    private ProductServiceClient client;
+
     @GetMapping("/products/{id}")
     public ResponseEntity<ProductDto> getProduct(@PathVariable Integer id) {
         return adminService.getProduct(id);
@@ -24,7 +28,7 @@ public class AdminController {
 
     @GetMapping("/products")
     public ResponseEntity<List<ProductDto>> getAllProducts() {
-        return adminService.getAllProducts();
+        return client.getAllProducts();
     }
 
     @PostMapping("/products")

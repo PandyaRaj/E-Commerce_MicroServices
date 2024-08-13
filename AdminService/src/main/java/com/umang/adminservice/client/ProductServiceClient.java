@@ -7,21 +7,21 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "product-service")
+@FeignClient(url = "http://127.0.0.1:8080", name = "product-service")
 public interface ProductServiceClient {
 
-    @GetMapping("/products/{id}")
+    @GetMapping("/api/products/{id}")
     ResponseEntity<ProductDto> getProduct(@PathVariable Integer id);
 
-    @GetMapping("/products")
+    @GetMapping("/api/products")
     ResponseEntity<List<ProductDto>> getAllProducts();
 
-    @PostMapping("/products")
+    @PostMapping("/api/products")
     ResponseEntity<ProductDto> createProduct(@RequestBody ProductDto product);
 
-    @PutMapping("/products/{id}")
+    @PutMapping("/api/products/{id}")
     ResponseEntity<ProductDto> updateProduct(@PathVariable Integer id, @RequestBody ProductDto product);
 
-    @DeleteMapping("/products/{id}")
+    @DeleteMapping("/api/products/{id}")
     ResponseEntity<String> deleteProduct(@PathVariable Integer id);
 }
