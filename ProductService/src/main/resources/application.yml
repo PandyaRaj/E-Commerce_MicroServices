@@ -1,0 +1,17 @@
+
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/productsdb
+        username: postgres
+        password: postgres
+    jpa:
+        hibernate:
+            ddl-auto: create
+            show-sql: true
+server:
+    port: 8081
+
+springfox:
+    documentation:
+        swagger:
+            enabled: true
