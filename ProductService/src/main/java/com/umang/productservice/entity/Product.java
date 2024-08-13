@@ -31,4 +31,7 @@ public class Product {
 
     @Column(name = "image_id", nullable = false, length = 50)
     private String imageId;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<OrderProduct> orderProducts;
 }
