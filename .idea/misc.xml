@@ -8,12 +8,15 @@
         <option value="$PROJECT_DIR$/ProductService/pom.xml" />
         <option value="$PROJECT_DIR$/AdminService/pom.xml" />
         <option value="$PROJECT_DIR$/EurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/OrderService/pom.xml" />
+        <option value="$PROJECT_DIR$/imgservice/imgservice/pom.xml" />
+        <option value="$PROJECT_DIR$/imgservice/pom.xml" />
+        <option value="$PROJECT_DIR$/ImageService1/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/EurekaServer/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
       </set>
     </option>
   </component>

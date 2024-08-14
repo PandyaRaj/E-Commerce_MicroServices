@@ -1,6 +1,6 @@
-package com.example.imgservice.repository;
+package com.umang.imageservice1.repository;
 
-import com.example.imgservice.model.Image;
+import com.umang.imageservice1.model.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
