@@ -1,4 +1,4 @@
-package com.example.imgservice.security;
+package com.umang.orderservice.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

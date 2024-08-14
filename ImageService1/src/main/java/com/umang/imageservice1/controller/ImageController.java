@@ -1,7 +1,7 @@
-package com.example.imgservice.controller;
+package com.umang.imageservice1.controller;
 
-import com.example.imgservice.model.Image;
-import com.example.imgservice.repository.ImageRepository;
+import com.umang.imageservice1.model.Image;
+import com.umang.imageservice1.repository.ImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

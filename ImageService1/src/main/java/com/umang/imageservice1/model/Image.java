@@ -1,6 +1,6 @@
-    package com.example.imgservice.model;
-    
-    
+    package com.umang.imageservice1.model;
+
+
     import jakarta.persistence.Entity;
     import jakarta.persistence.GeneratedValue;
     import jakarta.persistence.GenerationType;
