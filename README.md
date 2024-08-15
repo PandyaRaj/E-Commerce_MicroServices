@@ -11,7 +11,7 @@ This project is a basic e-commerce application designed using a microservices ar
 4. Image Service: Manages product images.
 
 ### Technical stack
-1. Database: Postgres/H2 Database
+1. Database: PostgreSQL/H2 Database
 2. Framework: Spring Boot
 3. Message Broker: Apache Kafka
 4. API Gateway: Spring Cloud Gateway
