@@ -10,6 +10,10 @@ This project is a basic e-commerce application designed using a microservices ar
 3. Orders Service: Handles order processing and management.
 4. Image Service: Manages product images.
 
+### Architecture
+![EcommerceMicroservice](https://github.com/user-attachments/assets/30dc3288-2249-4d3b-978f-ad653498980a)
+
+
 ### Technical stack
 1. Database: PostgreSQL/H2 Database
 2. Framework: Spring Boot
