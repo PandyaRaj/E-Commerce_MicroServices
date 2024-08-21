@@ -13,6 +13,24 @@ Orders Service: Handles customer orders, calculates total prices, and updates pr
 Admin Service: Manages administrative operations including product management and viewing orders.
 Image Service: Retrieves product images based on the image ID.
 
+### MicroServices
+1. Products Service: Manages product information and inventory.
+2. Admin Service: Provides administrative functionalities.
+3. Orders Service: Handles order processing and management.
+4. Image Service: Manages product images.
+
+### Architecture
+![EcommerceMicroservice](https://github.com/user-attachments/assets/30dc3288-2249-4d3b-978f-ad653498980a)
+
+
+### Technical stack
+1. Database: PostgreSQL/H2 Database
+2. Framework: Spring Boot
+3. Message Broker: Apache Kafka
+4. API Gateway: Spring Cloud Gateway
+5. Frontend: React.js
+
+
 
 Features
 
