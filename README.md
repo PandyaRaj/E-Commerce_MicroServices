@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # E-commerce Microservice Application
 
 This is a basic e-commerce application built using microservices architecture with Spring Framework in Java. The application is containerized with Docker and uses Kafka for asynchronous communication.
