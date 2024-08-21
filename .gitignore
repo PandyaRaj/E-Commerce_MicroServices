@@ -12,8 +12,11 @@ target/
 *.iml
 *.ipr
 
+<<<<<<< HEAD
 hoodie-marketplace/node_modules
 
+=======
+>>>>>>> origin/main
 ### Eclipse ###
 .apt_generated
 .classpath
